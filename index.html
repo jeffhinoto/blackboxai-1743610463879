@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stream Automator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="app.js" defer></script>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <header class="flex justify-between items-center mb-8">
+            <h1 class="text-3xl font-bold text-blue-600">
+                <i class="fas fa-play-circle mr-2"></i>Stream Automator
+            </h1>
+            <div class="bg-white rounded-lg shadow p-4">
+                <span class="font-semibold">Points:</span>
+                <span id="points-balance" class="ml-2 text-blue-600 font-bold">0</span>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="bg-white rounded-lg shadow-lg p-8">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl font-semibold mb-4">Current Session</h2>
+                <div id="timer-display" class="text-5xl font-mono font-bold text-blue-600 mb-6">10:00</div>
+                <button id="start-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition">
+                    Start Session
+                </button>
+            </div>
+
+            <div class="border-t pt-6">
+                <h3 class="text-xl font-semibold mb-4">Redeem Points</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-medium mb-2">50 Viewers</h4>
+                        <p class="text-sm text-gray-600 mb-3">100 points</p>
+                        <button class="redeem-btn bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded text-sm" data-points="100" data-viewers="50">
+                            Redeem
+                        </button>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-medium mb-2">100 Viewers</h4>
+                        <p class="text-sm text-gray-600 mb-3">180 points</p>
+                        <button class="redeem-btn bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded text-sm" data-points="180" data-viewers="100">
+                            Redeem
+                        </button>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h4 class="font-medium mb-2">200 Viewers</h4>
+                        <p class="text-sm text-gray-600 mb-3">350 points</p>
+                        <button class="redeem-btn bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded text-sm" data-points="350" data-viewers="200">
+                            Redeem
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Navigation -->
+        <footer class="mt-8 text-center">
+            <a href="history.html" class="text-blue-600 hover:text-blue-800 font-medium">
+                <i class="fas fa-history mr-2"></i>View Session History
+            </a>
+        </footer>
+    </div>
+</body>
+</html>
